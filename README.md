@@ -157,9 +157,9 @@ We could imagine another specification of the `current_age_for_birth_year` metho
 
 ```ruby
 it "should return the current year for a person born in year 0" do
-  twenty_sixteen = current_age_for_birth_year(0)
+  age = current_age_for_birth_year(0)
 
-  expect(twenty_sixteen).to eq(2003)
+  expect(age).to eq(2003)
 end
 ```
 
@@ -352,7 +352,7 @@ require_relative './current_age_for_birth_year.rb'
 puts "What year were you born?"
 birth_year = gets.to_i
 
-users_age = current_age_for_birth_year(birth_year) + (Time.now.year - 2003)
+users_age = current_age_for_birth_year(birth_year)
 
 puts "You are: " + users_age.to_s + " years old."
 ```
